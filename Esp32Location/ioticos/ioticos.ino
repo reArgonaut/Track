@@ -7,13 +7,7 @@
 //*********** MQTT CONFIG **************
 //**************************************
 
-/*
-const char *mqtt_server = "ioticos.org";
-const int mqtt_port = 1883;
-const char *mqtt_user = "vWOCdJJAVrNGHSA";
-const char *mqtt_pass = "NVwuV6Vpe2Xhrou";
-const char *root_topic_subscribe = "XQ1e2ChibMroTao/input";
-const char *root_topic_publish = "XQ1e2ChibMroTao/output"; */
+
 
 const char *mqtt_server = "35.235.119.114";
 const int mqtt_port = 1883;
@@ -22,7 +16,7 @@ const char *mqtt_pass = "12345";
 const char *root_topic_subscribe = "sus";
 const char *root_topic_publish = "prueba";
 
-const char* googleApiKey = "AIzaSyA2tBmbglm9Myu6wvaMCsn0AYqKJNBe1Xo";
+const char* googleApiKey = "API KEY";
 
 int pinLedR = 21;  // pin Rojo del led RGB
 int pinLedV = 19  ;  // pin Verde del led RGB
@@ -40,8 +34,8 @@ String exac     = "";
 
 //const char* ssid = "UTCH MOVIL";
 //const char* password =  "";
-const char* ssid = "HUAWEI P9 lite";
-const char* password =  "ccfc5ca89798";
+const char* ssid = "UTCH MOVIL";
+const char* password =  "YOUR PASS";
 
 
 //**************************************
