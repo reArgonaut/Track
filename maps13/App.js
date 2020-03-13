@@ -10,6 +10,7 @@
 import MapView, {PROVIDER_GOOGLE}  from 'react-native-maps';
 import  {Marker}  from 'react-native-maps';
 import React, {Component} from 'react';
+import { db } from './config';
 
 import {
   SafeAreaView,
@@ -67,18 +68,35 @@ export default class App extends Component {
 markers:
     [
       {
-      latlng: { latitude: 28.6411881, longitude: -106.148168 },
-      title: 'Edificio I' ,
-      description:  'Donde huele a OBO',
-    },
-      {
-      latlng: { latitude: 28.6422837, longitude: -106.1475928 },
-      title: 'Cafetería UTCH' ,
-      description:  'Donde huele hay buenas bolas de arroz :D',
-    },
+        latitude: 28.6411935,
+      longitude: -106.1481462,
+      title: 'HOLA',
+      description: 'hola'
+      },
+      {}
+    
     ],
   };
   }
+  
+  componentDidMount() {
+
+    db.ref('/react/').once('value').then(function(snapshot) {
+        userData = snapshot.val()
+     const nueva = {
+        latitude: userData.latitud,
+        longitude: userData.longitud,
+        title: "nuevo",
+        description: "description",
+      };
+       console.log('soy el objeto', nueva)
+      this.setState({markers: this.state.markers.push(nueva)}); 
+     
+      });
+    
+      
+    
+  };
   render(){
   return (
     <>
@@ -88,9 +106,10 @@ markers:
     style={styles.map}
      region= {this.state.region }
      >
-{this.state.markers.map(marker => (
+      {this.state.markers.map(marker => (
     <Marker
-      coordinate={marker.latlng}
+      latitude= {marker.latitude}
+      longitude= {marker.longitude}
       title={marker.title}
       description={marker.description}
     />
@@ -100,6 +119,4 @@ markers:
   </>
   );
 }
-}
-
-
+};

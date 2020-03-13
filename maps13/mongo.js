@@ -11,6 +11,7 @@ MongoClient.connect(url, {
    dbo.collection("coordenadas").find(query).toArray(function(err, result) {
     if (err) throw err;
       console.log(result)
+      var lati= result.latitud
     db.close();
-  });
-});
+  })
+})

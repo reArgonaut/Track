@@ -10,6 +10,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "firebase": "^7.11.0",
     "mongodb": "^3.5.4",
     "react": "16.9.0",
     "react-native": "0.61.5",
@@ -28,5 +30,6 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "proxy": "http://localhost:5000/"
 }
