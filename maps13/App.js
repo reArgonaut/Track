@@ -99,6 +99,7 @@ export default class App extends Component {
 shouldComponentUpdate() {return true
 }
   render(){
+    
     var lati =this.state.latitud;
         var longi =this.state.longitud;
     return(
@@ -111,7 +112,6 @@ shouldComponentUpdate() {return true
         rightButton={rightButtonConfig}
       />
        <MapView
-
        zoomEnabled={false}
        provider={PROVIDER_GOOGLE} // remove if not using Google Maps
        style={styles.map}
