@@ -6,7 +6,7 @@ import Landing from './components/Landing'
 import Login from './components/Login'
 import Register from './components/Register'
 import Profile from './components/Profile'
-// import Mapa from './components/Mapa'
+ import Mapa from './components/Mapa'
 import Tabla from './components/Tabla'
 import Footer from './components/Footer'
 import StickyFooter from 'react-sticky-footer';
@@ -25,7 +25,7 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
              <Route exact path="/login" component={Login} />
             <Route exact path="/profile" component={Profile} />
-            {/* <Route exact path="/Mapa" component={Mapa} /> */}
+             <Route exact path="/Mapa" component={Mapa} /> 
             <Route exact path="/Tabla" component={Tabla} />
             {/* <div className="push"></div> */}
             <Footer />

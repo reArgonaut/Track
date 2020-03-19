@@ -68,8 +68,6 @@ class Mapa extends Component{
             return (
                 
                 <Fragment>
-                    <div>pepe {lati}</div>
-                    <div>pepe {longi}</div>
                     <this.CMap
                         googleMapURL={this.props.googleMapURL}
                         loadingElement={<div style={{ height: `100%` }} />}
