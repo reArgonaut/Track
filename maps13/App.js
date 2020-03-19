@@ -115,23 +115,14 @@ shouldComponentUpdate() {return true
        provider={PROVIDER_GOOGLE} // remove if not using Google Maps
        style={styles.map}     
        region={ this.state.region } 
-     >{this.state.markers.map(marker => (
-      <Marker coordinate={marker.latlng}
-        key={marker.key}
-        title={marker.title}
-        description={marker.description}
-        image= {require('./bus_application_transportation_2930.png')}
-        >
-
-      </Marker>
-    ))}
-        <Marker
+     >
+      <Marker
         title= 'Camión'
         description= 'En curso !'
         coordinate={{latitude:lati, 
                     longitude:longi}}
         
-        image={require('./icons8-bus-96.png')}
+        image={require('./bus_application_transportation_2930.png')}
       /> 
      </MapView>
       </>
