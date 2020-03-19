@@ -25,6 +25,7 @@ const rightButtonConfig = {
   handler: () => alert('Tu camion llegara en 5 min!'),
 };
 
+
 const titleConfig = {
   title: 'Trackabus',
 };
@@ -89,10 +90,8 @@ export default class App extends Component {
     this.setState({
       latitud:window.lat,
       longitud:window.lon
-      
     })
-        console.log("La lati final es:"+this.state.latitud)
-        console.log("La long final es:"+this.state.longitud)}, 1000);
+        }, 100);
 }
 
 
@@ -104,24 +103,24 @@ shouldComponentUpdate() {return true
         var longi =this.state.longitud;
     return(
      
-
-      // <View style={styles.container}>
-        <View style={styless.container}>
+<>
+      
       <NavigationBar
-        title={titleConfig}
+        title={titleConfig}         
         rightButton={rightButtonConfig}
       />
+
        <MapView
-       zoomEnabled={false}
+              
        provider={PROVIDER_GOOGLE} // remove if not using Google Maps
-       style={styles.map}
-       initialRegion={ this.state.region }
+       style={styles.map}     
+       region={ this.state.region } 
      >{this.state.markers.map(marker => (
       <Marker coordinate={marker.latlng}
         key={marker.key}
         title={marker.title}
         description={marker.description}
-        image= {require('./icons8-cafe-100.png')}
+        image= {require('./bus_application_transportation_2930.png')}
         >
 
       </Marker>
@@ -135,8 +134,7 @@ shouldComponentUpdate() {return true
         image={require('./icons8-bus-96.png')}
       /> 
      </MapView>
-    </View>
-      
+      </>
     )
   }
    
