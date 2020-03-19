@@ -1,0 +1,31 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.4.1",
+    "firebase": "^7.10.0",
+    "jwt-decode": "^2.2.0",
+    "mdbreact": "^4.25.2",
+    "mqtt": "^3.0.0",
+    "mqtt-react": "0.0.2",
+    "rc-footer": "^0.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-google-maps": "^9.4.5",
+    "react-json-view": "^1.19.1",
+    "react-native-maps": "^0.26.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.5",
+    "react-sticky-footer": "0.1.0-rc3",
+    "sockjs": "^0.3.19"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:5000"
+}
